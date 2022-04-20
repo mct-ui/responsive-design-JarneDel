@@ -201,6 +201,9 @@ a:focus {
 .o-row--lg {
   padding: 48px 24px 24px;
 }
+.o-row--neutral-x-light{
+  background-color: #F7F7F7;
+}
 
 @media (min-width: 768px) {
   .o-row {
@@ -354,6 +357,32 @@ a:focus {
     ---
     Small reusable object to remove default list styling from lists
 */
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+  display: flow-root;
+}
+
+.o-section + .o-section {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .o-section--lg + .o-section--lg,
+  .o-section--xl + .o-section--xl {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .o-section--xl + .o-section--xl {
+    margin-top: 72px;
+  }
+}
 
 .o-list {
   list-style: none;
