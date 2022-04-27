@@ -402,6 +402,8 @@ a:focus {
   #COMPONENTS
 \*------------------------------------*/
 
+
+
 /*
     Component: CTA link
     ---
@@ -611,6 +613,33 @@ a:focus {
 }
 
 /*
+    Component: Title icon
+    ---
+    Special type of title with icon
+*/
+.c-title-icon {
+  display: flex;
+  align-items: flex-start;
+}
+
+.c-title-icon__icon {
+  height: 70px;
+  margin-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .c-title-icon__icon {
+      height: 84px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-title-icon__icon {
+      height: 112px;
+  }
+}
+
+/*
     Component: header
     ---
     Main header of the website
@@ -633,6 +662,68 @@ a:focus {
     display: block;
   }
 }
+
+
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-footer__logo {
+ width: 100%;
+}
+
+.c-footer__nav {
+ width: 50%;
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .c-footer__logo {
+      display: flex;
+      justify-content: center;
+      padding: 0 12px;
+    }
+
+    .c-footer__nav {
+      width: auto;
+      padding: 0 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      /* align-items: center; */
+    }
+
+    .c-footer__logo {
+      padding: 0;
+      order: 1;
+    }
+
+    /* .c-footer__logo .c-logo {
+      order: -1;
+    } */
+
+    .c-footer__nav {
+      width: auto;
+    }
+    .c-footer__nav+.c-footer__nav{
+      order: 1;
+    }
+} 
 
 /*------------------------------------*\
   #UTILITIES
